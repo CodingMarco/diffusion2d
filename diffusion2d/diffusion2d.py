@@ -7,10 +7,12 @@ Example acquired from https://scipython.com/book/chapter-7-matplotlib/examples/t
 import matplotlib.pyplot as plt
 import numpy as np
 
-from output import create_plot, output_plots
+from .output import create_plot, output_plots
 
 
-def solve(dx=0.1, dy=0.1, D=4.):
+# dx, dy: intervals in x-, y- directions, mm
+# D: thermal diffusivity, mm^2/s (4: steel)
+def solve(dx=0.1, dy=0.1, D=4):
     # plate size, mm
     w = h = 10.
 
